@@ -1,28 +1,29 @@
-public class X{
-
-void add(){
-	System.out.println("Thid method adds.....");
+interface Printable{
+	void print();
 }
 
-void add(int a){
-	System.out.println(a+100);
+interface Showable extends Printable{  // Inheritance among interfaces
+    void show();
 }
 
-void add(int a, int b){
-	System.out.println(a+b);
+class X implements Showable{  
+ public void print(){
+ System.out.println("Printing.....");
+ }
+
+ public void show(){
+ System.out.println(" Showing.....");
+ }
+
+ public static void main(String[] args) {
+  Showable x1=new X(); //
+  x1.print();
+  x1.show();
+
+ }
 }
 
-public static void main(String[] args) {  // main
 
-X x1=new X();
+// multiple inheritance : A B - C is not possible with classes
 
-x1.add();
-x1.add(50);
-x1.add(123,321);
-
-}
-
-}
-
-
-
+// multiple inheritance is possible with interfaces

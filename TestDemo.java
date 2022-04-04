@@ -1,33 +1,19 @@
-class TestDemo{
+public class TestDemo{
 
-public static void main(String[] arr){
+public static void main(String[] args){
+   
+  // Student object
+   Student s1=new Student(); // creating
+   s1.setStudent();
+   Student s2=new Student();
+   s2.setStudent();
+   Student s3=new Student();
+   s3.setStudent();
 
-    int a=0;
-    int b=1;
-    int c=0;
-    System.out.print(a+" "+b+" ");
-    int count=2;
+   s1.getStudent();
+   s2.getStudent();
+   s3.getStudent();
 
-    while(c<=100){
-        c=a+b;
-
-        if(c>100)
-            break;
-        
-        System.out.print(c+" ");
-
-        count++;
-        if(count%5==0)
-        System.out.println();
-
-        a=b;
-        b=c;
-
-    }   
-
+    }
+	
 }
-s
-}
-    
-
-

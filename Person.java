@@ -2,9 +2,9 @@
 
 import java.util.Scanner; // read from console - KB
 
-public class Person{
+public class Person{ // java.lang.Object
     // data part
-	String name; // referene varaible - instance - object
+	private String name; // referene varaible - instance - object
 	private int age; //primitive - instance - object
     private static String country="India"; // reference - class variables
     

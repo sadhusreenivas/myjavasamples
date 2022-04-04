@@ -1,49 +1,22 @@
-abstract class Vehicle{
-// speedLimit
-double speedlimit;
-// noOfWheels
-int noofwheels;
-
-// cons
-Vehicle(double s, int n){
-speedlimit=s;
-noofwheels=n;
+class Vehicle{
+	void run(){
+		System.out.println("Vehicle is running!!");
+	}
 }
 
-//concrete - disp()
-void disp(){
-System.out.println(speedlimit +" " + noofwheels);
-}
+class Bike extends Vehicle{
 
-//abstarct method - run();
-abstract void run();
-}
+	@Override
+	void run(){
+		System.out.println("Bike is running safely!!");
+	}
+	public static void main(String[] args) {
+ 
+    Vehicle v1=new Vehicle();
+    v1.run(); //
+    Bike b1=new Bike();
+    v1=b1; // 
+    v1.run(); // RTP
 
-public class Bike extends Vehicle{
-	//name ..sl nw
-String name;
-
-public Bike(double sp, int nw, String n){
-	super(sp,nw);
-	name=n;
-}
-
-void run(){
-	System.out.println("Running properly");
-}
-
-@Override
-void disp(){
-System.out.println(name +" "+speedlimit +" " + noofwheels);
-}
-
-public static void main(String[] args) {
-	
-// b1 and b2 - RTP
-	Vehicle b1=new Bike(80.5,2,"ABC");
-	b1.run();
-	b1.disp(); // RTP
-
-}
-
+	}
 }
