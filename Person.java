@@ -1,36 +1,20 @@
-//import java.lang.*; // by default 
+abstract class Person{
 
-import java.util.Scanner; // read from console - KB
+abstract void walk();
+void speak(){
+	System.out.println("Speaks English");
+}
 
-public class Person{ // java.lang.Object
-    // data part
-	private String name; // referene varaible - instance - object
-	private int age; //primitive - instance - object
-    private static String country="India"; // reference - class variables
-    
-   // methods part
-   public void setPerson(){ 
-   Scanner in=new Scanner(System.in);// create scanner object in
-   System.out.println("Enter name and age of person");
-   name=in.next(); // read string 
-   age=in.nextInt();// read integers
-   }
+public static void main(String[] args) {
 
-  public void getPerson(){
-  	System.out.println(name+"  "+age+" "+country);
-  }
+Person p1=new Person(){
+void walk(){
+System.out.println("Person walks on street");
+}
+	    
+};
+p1.walk();
+p1.speak();
 
-  public static void main(String[] args) { // JVM - start execution
-  	// creating 5 objects
-    
-    Person[] p=new Person[2]; // creating array of 5 persons;
-
-    for(int i=0;i<p.length;i++){
-      p[i]=new Person(); // create object - new - Person()
-      p[i].setPerson();
-      p[i].getPerson();
-    }
-   
-  }
-
+}
 }

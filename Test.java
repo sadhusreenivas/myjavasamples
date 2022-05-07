@@ -1,25 +1,31 @@
-public class TestDemo{
-public static void main(String[] args) {
-		
-      Rectangle r1=new Rectangle();
-      r1.length=20;
-      r1.width=25;
-      r1.findArea(); // 
+import java.io.*;
 
-      Rectangle r2=new Rectangle();
-      r2.length=10;
-      r2.width=15;
-      r2.findArea(); //0
-    
-      Circle c1=new Circle();
-      c1.radius=7;
-      c1.findArea();
+class Test{
+public static void main(String[] args) throws IOException {
+	
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
+System.out.println("Enter name");
+String name=br.readLine(); // IOException
+System.out.println("Enter age");
 
-      Circle c2=new Circle();
-      c1.radius=10;
-      c1.findArea();
+try{
+int age=Integer.parseInt(br.readLine()); // "27" -- 27
+System.out.println(age);
+}
+catch(ArithmeticException e){
+	System.err.println(e);
+}
+finally{ // always gets executed
+	System.out.println("Closing resources");
+    br.close();
+}
+System.out.println(name);
+System.out.println("Rest of the code!!!!");
 
-	}
 
 }
+  }
+
+
+
