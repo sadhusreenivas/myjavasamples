@@ -1,38 +1,31 @@
 import java.util.*;
 public class MapDemo {
-public static void main(String[] args) {
+    public static void main(String[] args) {
+        
+        Map<String,String> hm = new TreeMap(new MyComp());
+        hm.put("IN", "India");
+        hm.put("US", "USA");
+        hm.put("UK", "United Kingdom");
+        hm.put("DE", "Germany");
+        hm.put("AUS", "Australia");
+        System.out.println(hm);  
+        
+        Set s1 = hm.entrySet(); // Map.Entry
+        Iterator itr=s1.iterator();
 
-HashMap<String,Integer> m=new HashMap();  // keys and values - keys 
+        while(itr.hasNext()){
+            Map.Entry m = (Map.Entry)itr.next();
+            System.out.println(m.getKey()+" -> "+m.getValue());
+        }
 
-m.put("sadhu",5400); 
-m.put("simi",5400); 
-m.put("sharan",6600); 
-m.put("pramod",7600);
-
-System.out.println(m); // 
-
-m.put("nag",5400); 
-m.put("bsrk",5400); 
-
-System.out.println(m);
-
-
-//Set s=m.keySet(); //System.out.println(s);
-Collection s1=m.keySet(); 
-System.out.println(s1); 
-
-Collection c=m.values(); 
-System.out.println(c);
-
-
-Set s2=m.entrySet();
-Iterator itr=s2.iterator();
-
-while(itr.hasNext()){
-Map.Entry m1=(Map.Entry)itr.next(); 
-System.out.println(m1.getKey()+"__"+m1.getValue());
-
+    }
 }
 
-} 
+class MyComp implements Comparator<String>{
+    @Override
+    public int compare(String s1,String s2) {
+       
+        return s2.compareTo(s1); // desc
+    }
+
 }

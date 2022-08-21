@@ -1,4 +1,10 @@
-
+/*Question: Create a JavaFX Program that displays a toString version of a linked list for strings or integers, with the capability of adding, removing, and clearing the list. 
+For example: if it is linked list of integers 1 through 4, it should be displayed as 1 -> 2 -> 3-> 4-> null. if it is a linked list of strings alpha, bravo, charlie delta, it should be displayed as alpha -> bravo -> charlie -> delta -> null
+Add the following buttons:
+ADD - that adds an item to the end of the linked list. For this, you will need a text input as well to get the value from the user
+REMOVE - that removes an item from the front of the linked list.
+CLEAR - that clears the linked list.
+The linked list being displayed should be updated in real-time. Include proper exception handling as well where you think necessary.*/
 
 import javafx.application.Application;
 import javafx.stage.Stage;

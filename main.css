@@ -1,0 +1,17 @@
+.root{
+    -fx-font: 12pt sans-serif; 
+    -fx-background-color: aliceblue; 
+    -fx-text-fill: black;
+    }
+.label { 
+        -fx-font-weight: bold; 
+        -fx-text-fill: navy;
+    }
+.button {
+    -fx-font-weight: bold; 
+    -fx-text-fill: darkslategrey; 
+    -fx-border-width: 2px;
+     -fx-border-style: groove; 
+     -fx-border-color: navy; 
+     -fx-background-color: lightgrey;
+    }
